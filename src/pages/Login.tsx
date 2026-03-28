@@ -103,9 +103,15 @@ const Login = () => {
         </div>
 
         {/* Right - Drone HUD Image */}
-        <div className="hidden md:block md:w-1/2">
-          <img src={droneHud} alt="Drone SAR operational view" className="h-[90vh] w-full object-cover" />
-        </div>
+        <div className="hidden md:flex md:w-1/2 justify-center items-center mt-5">
+  <div className="w-[95%] h-[92%] rounded-md border-2 overflow-hidden">
+    <img
+      src={droneHud}
+      alt="Drone SAR operational view"
+      className="w-full h-full object-cover"
+    />
+  </div>
+</div>
       </div>
     </div>
   );

@@ -64,17 +64,31 @@ const Verify = () => {
 
         {/* Right - Image + Step indicator */}
         <div className="relative hidden md:block md:w-1/2">
-          <div className="absolute left-1/2 top-6 z-10 flex -translate-x-1/2 items-center gap-0">
-            {steps.map((step, i) => (
-              <div key={step} className="flex items-center">
-                <div className={`flex h-10 w-10 items-center justify-center rounded-full border-2 text-sm font-bold ${
-                  step <= 2 ? "border-primary bg-primary text-primary-foreground" : "border-primary/40 bg-card/60 text-foreground"
-                }`}>{step === 1 ? <Check className="h-5 w-5" /> : step}</div>
-                {i < steps.length - 1 && <div className="h-0.5 w-12 bg-primary/40" />}
-              </div>
-            ))}
-          </div>
-          <img src={droneHud} alt="Drone SAR operational view" className="h-full w-full object-cover" />
+          <div className="flex items-center justify-center gap-2 my-3">
+  {/* Cercle vert avec Check */}
+  <div className="w-[42px] h-[42px] rounded-full bg-[#325c44] flex items-center justify-center">
+    <Check className="w-6 h-6 text-[#e4ddd3]" strokeWidth={3} />
+  </div>
+
+  {/* Trait */}
+  <div className="h-[2px] w-[90px] bg-[#325c44]"></div>
+
+  {/* Cercle 2 */}
+  <p className="rounded-full bg-[#325c44] w-[42px] h-[42px] flex text-[#e4ddd3] items-center justify-center text-2xl font-semibold">
+    2
+  </p>
+
+  {/* Trait */}
+  <div className="h-[2px] w-[90px] bg-[#325c44]"></div>
+
+  {/* Cercle 3 */}
+  <p className="rounded-full bg-transparent text-[#325c44] w-[42px] h-[42px] flex border-[3px] border-[#325c44] items-center justify-center text-2xl font-semibold">
+    3
+  </p>
+</div>
+<div className="border-3 border-black  w-[95%] h-[85%] overflow-hidden rounded-md">
+  <img src={droneHud} alt="Drone SAR operational view" className="w-full h-full object-cover border-3 border-black" />
+</div>
         </div>
       </div>
     </div>
