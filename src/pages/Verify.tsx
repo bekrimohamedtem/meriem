@@ -1,14 +1,16 @@
 import { useState, useRef } from "react";
 import { Mail, Check } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import rescueBg from "@/assets/rescue-bg.jpg";
 import droneHud from "@/assets/drone-hud.png";
 
 const steps = [1, 2, 3];
 
+
 const Verify = () => {
   const [code, setCode] = useState(["", "", "", "", "", ""]);
   const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
-
+const navigate = useNavigate()
   const handleChange = (index: number, value: string) => {
     if (!/^\d*$/.test(value)) return;
     const newCode = [...code];
@@ -16,13 +18,14 @@ const Verify = () => {
     setCode(newCode);
     if (value && index < 5) inputRefs.current[index + 1]?.focus();
   };
-
+  
   const handleKeyDown = (index: number, e: React.KeyboardEvent) => {
     if (e.key === "Backspace" && !code[index] && index > 0) inputRefs.current[index - 1]?.focus();
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    navigate("/infos")
   };
 
   return (
