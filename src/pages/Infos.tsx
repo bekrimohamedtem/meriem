@@ -39,8 +39,8 @@ const Infos = () => {
           </div>
           <form onSubmit={handleSubmit}>
             <div className="mt-5">
-              <input placeholder="Birth day date" className="w-[58%] inline mr-2 rounded-full border border-border bg-input px-5 py-3 pr-12 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"/>
-              <input placeholder="Gendre" className="w-[39%] rounded-full border border-border bg-input pl-5 pr-2 py-3 pr-12 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"/>
+              <input placeholder="Birth day date" className="w-[58%] inline sm:mr-5 sm:w-[45%] sm:pr-3 mr-2 rounded-full border border-border bg-input px-5 py-3 pr-12 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"/>
+              <input placeholder="Gendre" className="w-[39%] rounded-full border sm:w-[35%] sm:pr-3 border-border bg-input pl-5 pr-2 py-3 pr-12 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"/>
             </div>
             <input className="w-full mt-2 rounded-full border border-border bg-input px-5 py-3 pr-12 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring" placeholder="First Phone Number"/>
             <input className="w-full mt-2 rounded-full border border-border bg-input px-5 py-3 pr-12 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring" placeholder="Second Phone Number"/>

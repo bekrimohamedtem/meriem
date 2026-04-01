@@ -30,7 +30,7 @@ const navigate = useNavigate()
 
   return (
     <div className="flex min-h-screen items-center justify-center p-4" style={{ backgroundImage: `url(${rescueBg})`, backgroundSize: "cover", backgroundPosition: "center" }}>
-      <div className="flex w-full max-w-[900px] overflow-hidden rounded-2xl bg-card/90 shadow-2xl backdrop-blur-sm">
+      <div className="flex p-3 w-full max-w-[900px] overflow-hidden rounded-2xl bg-card/90 shadow-2xl backdrop-blur-sm">
         {/* Left - Form */}
         <div className="flex w-full flex-col items-center justify-center px-8 py-10 md:w-1/2 md:px-12">
           <h1 className="mb-4 text-3xl font-bold text-foreground">Verify your Account</h1>
