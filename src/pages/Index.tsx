@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Target, MapPin, AlertTriangle, Facebook, Twitter, Instagram } from "lucide-react";
 import landingDrone from "@/assets/landing-drone.jpg";
 import landingBg from "@/assets/landing-bg.png";
-
+import Navbar from "@/components/Navbar";
 const features = [
   {
     icon: <Target className="h-6 w-6 text-primary" />,
@@ -37,17 +37,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* NAV */}
-      <nav className="absolute left-0 right-0 top-0 z-20 flex items-center justify-between px-6 py-4 md:px-12">
-        <h2 className="text-2xl font-bold text-primary-foreground drop-shadow-lg">ResQAid</h2>
-        <div className="hidden items-center gap-8 md:flex">
-          {["features", "technology", "company", "contact"].map((item) => (
-            <a key={item} href={`#${item}`} className="text-sm font-medium text-primary-foreground/90 transition-colors hover:text-primary-foreground drop-shadow">
-              {item}
-            </a>
-          ))}
-          <span className="text-sm font-medium text-primary-foreground/90 drop-shadow">eng</span>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* HERO */}
       <section className="relative flex min-h-[85vh] items-center overflow-hidden">

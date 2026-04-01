@@ -17,7 +17,7 @@ const Infos = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    navigate("/verify");
+    navigate("/profile");
   };
 
   return (
@@ -31,12 +31,13 @@ const Infos = () => {
     >
       <div className="flex w-full max-w-[900px] overflow-hidden rounded-2xl bg-card/90 shadow-2xl backdrop-blur-sm">
         
-        <div className="flex w-full flex-col justify-center px-8 py-10 md:w-1/2 md:px-12">
+        <div className="flex w-full flex-col justify-center px-8 py-3 pb-7 md:w-1/2 md:px-12">
           {/* fill   Here  */}
            <div className="flex flex-col items-center">
               <CircleUser className="w-20 h-20 mb-2" />
               <button className="bg-[#325c44] py-1 px-2 rounded-md text-white ">Upload a photo</button>
           </div>
+          <form onSubmit={handleSubmit}>
             <div className="mt-5">
               <input placeholder="Birth day date" className="w-[58%] inline mr-2 rounded-full border border-border bg-input px-5 py-3 pr-12 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"/>
               <input placeholder="Gendre" className="w-[39%] rounded-full border border-border bg-input pl-5 pr-2 py-3 pr-12 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"/>
@@ -62,10 +63,11 @@ const Infos = () => {
             <input placeholder="Hight" className="w-[48%] mr-3 inline rounded-full border border-border bg-input px-5 py-3 pr-12 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"/>
             <input placeholder="Weight" className="w-[48%] rounded-full border border-border bg-input pl-5 pr-2 py-3 pr-12 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"/>  
            </div>
-           <p className="text-red-600 font-semibold under-lined mb-2 mt-5">Your data is private and used only during emergency operations.</p>
-           <button type="submit" className="w-full rounded-full bg-primary py-3.5 text-lg font-bold text-primary-foreground transition-colors hover:bg-accent">
+           <label className="flex cursor-pointer text-red-600 mt-6 items-start gap-2 text-sm font-semibold text-foreground">Your data is private and used only during emergency operations.</label>
+           <button type="submit"  className="w-full rounded-full bg-primary py-3.5 text-lg font-bold text-primary-foreground transition-colors hover:bg-accent">
               Save Profile
             </button>
+    </form>
       </div>
 
         {/* Right - Image + Step indicator */}
